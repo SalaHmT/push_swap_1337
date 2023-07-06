@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 18:45:13 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/06 16:12:03 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/06 17:31:03 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,12 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstnew(void	*content);
 t_list	*ft_lstlast(t_list *lst);
+//********* Parsing *********************
+int		arg_len(char **str);
+int		is_all_digit(char *str);
+char	*join_arg(char **str, int x);
+char	**split_arg(char **str, int x);
+void	check_if_empty(char **str, int len);
 // ******** Error Handling Msg **********
 void	check_nbr_error(void);
 
