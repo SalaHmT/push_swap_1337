@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/04 19:04:11 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/06 14:21:01 by shamsate         ###   ########.fr       */
+/*   Created: 2023/07/06 14:22:57 by shamsate          #+#    #+#             */
+/*   Updated: 2023/07/06 14:56:46 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/push_swap.h"
 
-void	ft_putstr(char *str)
+char	*ft_strdup(const char *str)
 {
-	int	i;
+	char	*strr;
+	size_t	i;
 
+	strr = (char *)malloc(sizeof(char) * ft_strlen(str) + 1);
+	if (!strr)
+		return (strr);
 	i = -1;
-	while (str[++i])
-		ft_putchar(str[i]);
+	while (strr[++i])
+		strr[i] = str[i];
+	strr[i] = '\0';
+	return (strr);
 }

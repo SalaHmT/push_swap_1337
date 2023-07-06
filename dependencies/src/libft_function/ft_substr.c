@@ -1,22 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/04 19:04:11 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/06 14:21:01 by shamsate         ###   ########.fr       */
+/*   Created: 2023/07/06 15:01:43 by shamsate          #+#    #+#             */
+/*   Updated: 2023/07/06 15:07:52 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/push_swap.h"
 
-void	ft_putstr(char *str)
+char	*ft_substr(char	const *s, unsigned int start, size_t len)
 {
-	int	i;
+	char	*s2;
+	size_t	s_len;
+	size_t	end;
+	size_t	i;
 
-	i = -1;
-	while (str[++i])
-		ft_putchar(str[i]);
+	if (!s)
+		return (0);
+	i = 0;
+	s_len = ft_strlen(s);
+	end = 0;
+	if (start < s_len)
+	end = s_len - strat;
+	if ( end > len)
+		end = len;
+	s2 =(char *)malloc(sizeof(char) * (end + 1));
+	if ( !s2)
+		return (s2);
+	while (i < len && strat < ft_strlen(s))
+	{
+		s2[i] = s[start];
+		i++;
+		start++;
+	}
+	s2[i] = '\0';
+	return (s2);
 }

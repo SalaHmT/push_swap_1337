@@ -6,11 +6,11 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 18:58:50 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/04 19:03:52 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/06 14:21:33 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
+#include "../../../include/push_swap.h"
 
 void	check_if_dupl(char **str, int x)
 {

@@ -6,11 +6,11 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 18:29:00 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/04 18:51:52 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/06 14:20:32 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
+#include "../../../include/push_swap.h"
 
 int	is_a_num(char *str)
 {

@@ -6,13 +6,13 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 19:06:18 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/04 19:07:25 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/06 14:58:40 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
+#include "../../../include/push_swap.h"
 
 void	ft_putchar(char c)
 {
-	write( 1, &c, 1);
+	write(1, &c, 1);
 }
