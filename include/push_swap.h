@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 18:45:13 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/08 14:12:46 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/08 15:01:22 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 //********* Parsing *********************
 int		arg_len(char **str);
+void	check_if_dupl(char **str, int x);
+void	check_if_is_nbr(char **str, int x);
 int		is_all_digit(char *str);
 char	*join_arg(char **str, int x);
 char	**split_arg(char **str, int x);
@@ -54,6 +56,7 @@ void	check_if_empty(char **str, int len);
 void	free_stack(t_list *stk);
 void	free_all_stack(t_list **a, t_list **b);
 void	free_data(char **str);
+bool	check_number(t_list *stk_a);
 //************ Movement **********************
 void	push_number(t_list **src, t_list **dst);
 void	pa(t_list **stk_b, t_list **stk_a);
@@ -71,6 +74,9 @@ void	sb(t_list **dst);
 void	sa(t_list **src);
 void	ss(t_list **src, t_list **dst);
 //**************** Sorting ******************
+int		get_idx_max_nbr(t_list *lst);
+int		get_idx_min_nbr(t_list *lst);
+void	get_idx(t_list *stk);
 void	sort_2_nbr(t_list **src);
 void	sort_3_nbr(t_list	**src);
 

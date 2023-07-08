@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sorting_4_nbr.c                                    :+:      :+:    :+:   */
+/*   stack_pushing.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/08 14:11:43 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/08 15:04:59 by shamsate         ###   ########.fr       */
+/*   Created: 2023/07/08 14:44:53 by shamsate          #+#    #+#             */
+/*   Updated: 2023/07/08 15:00:32 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/push_swap.h"
 
-void	sort_4_nbr(t_list **src, t_list **dst)
+bool	check_number(t_list *stk_a)
 {
-	int	min_idx;
-
-	min_idx = get_idx_min_nbr(*src);
-	while (ft_lstsize(*src) > 3)
+	if (!ft_lstsize(stk_a))
+		return (false);
+	while (stk_a->next)
 	{
-		if (check_number(*src) && (!dst))
-			return ;
-		if (min_idx == 0)
-			pb(src, dst);
-		else if (min_idx <= 2)
-			ra(src);
-		else if (min_idx > 2)
-			rra(src);
-		min_idx = get_idx_min_nbr(*src);
+		if (stk_a->content > stk_a->next->content)
+			return (false);
+		else
+			stk_a = stk_a->next;
 	}
-	sort_3_nbr(src);
-	pa(dst, src);
+	return (true);
+}
+
+void	push_stk(t_list **stk_a, char **str)
+{
+	int	len;
+
+	len = arg_len(str);
+	check_if_dupl(str, len);
+	check_if_is_nbr(str, len);
+	while (len)
+		ft_lstadd_front(stk_a, ft_lstnew(ft_atoi(str[--len])));
 }
