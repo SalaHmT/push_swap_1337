@@ -6,11 +6,33 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 14:11:43 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/08 15:04:59 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/08 16:03:23 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/push_swap.h"
+
+int	get_idx_min_nbr(t_list *lst)
+{
+	int	min;
+	int	idx;
+	int	i;
+
+	i = 0;
+	idx = 0;
+	min = lst->content;
+	while (lst)
+	{
+		if (lst->content < min)
+		{
+			idx = i;
+			min = lst->content;
+		}
+		i++;
+		lst = lst->next;
+	}
+	return (idx);
+}
 
 void	sort_4_nbr(t_list **src, t_list **dst)
 {

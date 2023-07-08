@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 18:45:13 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/08 15:43:49 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/08 16:47:29 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,12 +76,16 @@ void	ss(t_list **src, t_list **dst);
 //**************** Sorting ******************
 int		get_idx_max_nbr(t_list *lst);
 int		get_idx_min_nbr(t_list *lst);
+int		get_idx_nbr(t_list *dst, int size);
+int		get_num(t_list *dst, int idx);
 void	get_idx(t_list *stk);
 void	sort_2_nbr(t_list **src);
 void	sort_3_nbr(t_list	**src);
 void	sort_4_nbr(t_list **src, t_list **dst);
 void	sort_5_nbr(t_list **src, t_list **dst);
-
+void	push_2_stk_a(t_list **dst, t_list **src);
+void	push_2_a(t_list **dst, t_list **src);
+void	mv_2_top(t_list **dst, t_list **src, int idx)
 //******** Error Handling Msg **********
 void	check_nbr_error(void);
 
