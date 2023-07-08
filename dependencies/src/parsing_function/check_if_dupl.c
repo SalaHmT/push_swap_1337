@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 18:58:50 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/06 14:21:33 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/08 17:53:47 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	check_if_dupl(char **str, int x)
 		while (j < x)
 		{
 			if (ft_atoi(str[i]) == ft_atoi(str[j]))
-				ft_putstr("Duplicate Number ... Not Allowed :(\n");
+				ft_putstr(" Error : Duplicate Number ... Not Allowed :(\n");
 			j++;
 		}
 	}

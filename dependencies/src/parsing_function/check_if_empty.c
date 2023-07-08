@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 17:23:35 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/06 17:30:12 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/08 17:53:41 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ void	check_if_empty(char **str, int len)
 	while (++i < len)
 	{
 		if (!is_all_digit(str[i]))
-			ft_pustr("Must be all numbers... :(\n");
+			ft_pustr("Error : Must be all numbers... :(\n");
 	}
 }

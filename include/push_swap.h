@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 18:45:13 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/08 17:40:26 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/08 18:00:23 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void	free_stack(t_list *stk);
 void	free_all_stack(t_list **a, t_list **b);
 void	free_data(char **str);
 bool	check_number(t_list *stk_a);
+void	push_stk(t_list **stk_a, char **str);
 //************ Movement **********************
 void	push_number(t_list **src, t_list **dst);
 void	pa(t_list **stk_b, t_list **stk_a);
@@ -89,6 +90,7 @@ void	mv_2_top(t_list **dst, t_list **src, int idx);
 void	push_2_stk_b(t_list **src, t_list **dst, int mv, int chk);
 void	sort_500_nbr(t_list **src, t_list **dst);
 void	sort_100_nbr(t_list **src, t_list **dst);
+void	mapping_nbr(t_list **stk_a, t_list **stk_b);
 //******** Error Handling Msg **********
 void	check_nbr_error(void);
 
