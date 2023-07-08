@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 18:45:13 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/08 13:55:21 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/08 14:12:46 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,10 @@ void	swap_number(t_list **lst);
 void	sb(t_list **dst);
 void	sa(t_list **src);
 void	ss(t_list **src, t_list **dst);
+//**************** Sorting ******************
+void	sort_2_nbr(t_list **src);
+void	sort_3_nbr(t_list	**src);
+
 //******** Error Handling Msg **********
 void	check_nbr_error(void);
 
