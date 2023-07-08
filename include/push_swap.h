@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 18:45:13 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/06 17:53:18 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/08 13:55:21 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,23 @@ void	check_if_empty(char **str, int len);
 void	free_stack(t_list *stk);
 void	free_all_stack(t_list **a, t_list **b);
 void	free_data(char **str);
-
-// ******** Error Handling Msg **********
+//************ Movement **********************
+void	push_number(t_list **src, t_list **dst);
+void	pa(t_list **stk_b, t_list **stk_a);
+void	pb(t_list **stk_b, t_list **stk_a);
+void	reverse_number(t_list **lst);
+void	rra(t_list **src);
+void	rrr(t_list **src, t_list **dst);
+void	rrb(t_list **dst);
+void	rotate_number(t_list **lst);
+void	rb(t_list **dst);
+void	ra(t_list **src);
+void	rr(t_list **src, t_list **dst);
+void	swap_number(t_list **lst);
+void	sb(t_list **dst);
+void	sa(t_list **src);
+void	ss(t_list **src, t_list **dst);
+//******** Error Handling Msg **********
 void	check_nbr_error(void);
 
 #endif
