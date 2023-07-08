@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 18:45:13 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/08 15:01:22 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/08 15:37:31 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,7 @@ int		get_idx_min_nbr(t_list *lst);
 void	get_idx(t_list *stk);
 void	sort_2_nbr(t_list **src);
 void	sort_3_nbr(t_list	**src);
+void	sort_4_nbr(t_list **src, t_list **dst);
 
 //******** Error Handling Msg **********
 void	check_nbr_error(void);
