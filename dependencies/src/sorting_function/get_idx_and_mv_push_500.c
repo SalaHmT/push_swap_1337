@@ -6,11 +6,26 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 16:09:23 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/08 16:47:50 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/08 17:38:12 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/push_swap.h"
+
+void	sort_500_nbr(t_list **src, t_list **dst)
+{
+	int	chk;
+	int	mv;
+
+	chk = ft_lstsize(*src) / 9;
+	mv = chk;
+	while (ft_lstsize(*src))
+	{
+		push_2_stk_b(src, dst, mv, chk);
+		mv += chk;
+	}
+	push_2_a(dst, src);
+}
 
 int	get_idx_nbr(t_list *dst, int size)
 {
