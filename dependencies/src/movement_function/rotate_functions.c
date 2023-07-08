@@ -1,43 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   join_and_split_arg.c                               :+:      :+:    :+:   */
+/*   rotate_functions.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/06 17:11:38 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/06 18:55:00 by shamsate         ###   ########.fr       */
+/*   Created: 2023/07/08 11:58:29 by shamsate          #+#    #+#             */
+/*   Updated: 2023/07/08 12:15:02 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/push_swap.h"
 
-char	*join_arg(char **str, int x)
+void	rotate_number(t_list **lst)
 {
-	char	*strr;
-	char	*tmp;
-	int		i;
+	t_list	*rotate;
+	t_list	*tmp;
 
-	i = 1;
-	strr = ft_strdup("");
-	while (i < x)
-	{
-		tmp = ft_strjoin(strr, str);
-		free(strr);
-		strr = ft_strjoin(tmp, " ");
-		free(tmp);
-		i++;
-	}
-	return (strr);
+	if (ft_lstsize(*lst) <= 1)
+		return ;
+	tmp = (*lst);
+	(*lst) = (*lst)->next;
+	rotate = ft_lstlast(*lst);
+	rotate->next = tmp;
+	tmp->next = NULL;
 }
 
-char	**split_arg(char **str, int x)
+void	rb(t_list **dst)
 {
-	char	*strr;
-	char	**split;
+	rotate_number(dst);
+	ft_putstr("rb\n");
+}
 
-	strr = join_arg(str, x);
-	split = ft_split(strr, ' ');
-	free(strr);
-	return (split);
+void	ra(t_list **src)
+{
+	rotate_number(src);
+	ft_putstr("ra\n");
+}
+
+void	rr(t_list **src, t_list **dst)
+{
+	ra(src);
+	rb(dst);
+	ft_putstr("rr\n");
 }

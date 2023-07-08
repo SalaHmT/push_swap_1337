@@ -1,43 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   join_and_split_arg.c                               :+:      :+:    :+:   */
+/*   push_functions.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/06 17:11:38 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/06 18:55:00 by shamsate         ###   ########.fr       */
+/*   Created: 2023/07/08 11:47:02 by shamsate          #+#    #+#             */
+/*   Updated: 2023/07/08 11:53:52 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/push_swap.h"
 
-char	*join_arg(char **str, int x)
+void	push_number(t_list **src, t_list **dst)
 {
-	char	*strr;
-	char	*tmp;
-	int		i;
+	t_list	*push;
 
-	i = 1;
-	strr = ft_strdup("");
-	while (i < x)
-	{
-		tmp = ft_strjoin(strr, str);
-		free(strr);
-		strr = ft_strjoin(tmp, " ");
-		free(tmp);
-		i++;
-	}
-	return (strr);
+	if (!ft_lstsize(*src))
+		return ;
+	push = *src;
+	*src = (*src)->next;
+	push->next = NULL;
+	ft_lstadd_front(dst, push);
 }
 
-char	**split_arg(char **str, int x)
+void	pa(t_list **stk_b, t_list **stk_a)
 {
-	char	*strr;
-	char	**split;
+	push_number(stk_b, stk_a);
+	ft_putstr("pa\n");
+}
 
-	strr = join_arg(str, x);
-	split = ft_split(strr, ' ');
-	free(strr);
-	return (split);
+void	pb(t_list **stk_b, t_list **stk_a)
+{
+	push_number(stk_a, stk_b);
+	ft_putstr("pb\n");
 }
