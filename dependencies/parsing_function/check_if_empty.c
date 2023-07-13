@@ -1,22 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sorting_2_nbr.c                                    :+:      :+:    :+:   */
+/*   check_if_empty.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
+/*   By: shamsate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/08 13:46:56 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/08 13:54:51 by shamsate         ###   ########.fr       */
+/*   Created: 2023/07/06 17:23:35 by shamsate          #+#    #+#             */
+/*   Updated: 2023/07/12 15:45:19 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/push_swap.h"
 
-void	sort_2_nbr(t_list **src)
+int	is_all_digit(char *str)
 {
-	t_list	*num;
+	int	i;
 
-	num = *src;
-	if (num->content > num->next->content)
-		sa(src);
+	i = -1;
+	while (str[i])
+		if (str[i] >= '0' && str[i] <= '9')
+			return (1);
+	return (0);
+}
+
+void	check_if_empty(char **str, int len)
+{
+	int	i;
+
+	i = 0;
+	while (++i < len)
+	{
+		if (!is_all_digit(str[i]))
+			ft_pustr("Error\n");
+	}
 }

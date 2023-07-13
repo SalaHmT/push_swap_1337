@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_if_dupl.c                                    :+:      :+:    :+:   */
+/*   error_function_ handling.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
+/*   By: shamsate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/04 18:58:50 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/08 17:53:47 by shamsate         ###   ########.fr       */
+/*   Created: 2023/07/04 18:40:44 by shamsate          #+#    #+#             */
+/*   Updated: 2023/07/12 15:45:31 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/push_swap.h"
 
-void	check_if_dupl(char **str, int x)
+void	check_nbr_error(void)
 {
-	int	i;
-	int	j;
-
-	i = -1;
-	while (++i < x)
-	{
-		j = i + x;
-		while (j < x)
-		{
-			if (ft_atoi(str[i]) == ft_atoi(str[j]))
-				ft_putstr(" Error : Duplicate Number ... Not Allowed :(\n");
-			j++;
-		}
-	}
+	ft_putstr("Error\n");
+	exit(EXIT_FAILURE);
 }

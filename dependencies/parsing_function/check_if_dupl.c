@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_function_ handling.c                         :+:      :+:    :+:   */
+/*   check_if_dupl.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
+/*   By: shamsate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/04 18:40:44 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/08 17:53:34 by shamsate         ###   ########.fr       */
+/*   Created: 2023/07/04 18:58:50 by shamsate          #+#    #+#             */
+/*   Updated: 2023/07/12 15:45:06 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/push_swap.h"
 
-void	check_nbr_error(void)
+void	check_if_dupl(char **str, int x)
 {
-	ft_putstr("Error : Something rong in reading number ... :) \n");
-	exit(EXIT_FAILURE);
+	int	i;
+	int	j;
+
+	i = -1;
+	while (++i < x)
+	{
+		j = i + x;
+		while (j < x)
+		{
+			if (ft_atoi(str[i]) == ft_atoi(str[j]))
+				ft_putstr("Error\n");
+			j++;
+		}
+	}
 }
