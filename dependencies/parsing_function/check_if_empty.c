@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   check_if_empty.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shamsate <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 17:23:35 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/12 15:45:19 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/15 20:55:19 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 int	is_all_digit(char *str)
 {
 	int	i;
 
 	i = -1;
-	while (str[i])
+	while (str[++i])
 		if (str[i] >= '0' && str[i] <= '9')
 			return (1);
 	return (0);
@@ -31,6 +31,9 @@ void	check_if_empty(char **str, int len)
 	while (++i < len)
 	{
 		if (!is_all_digit(str[i]))
-			ft_pustr("Error\n");
+		{
+			ft_putstr("Error\n");
+			exit(EXIT_FAILURE);
+		}
 	}
 }

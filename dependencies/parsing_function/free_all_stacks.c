@@ -6,11 +6,11 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 17:44:17 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/06 17:50:55 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/15 20:52:16 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 void	free_stack(t_list *stk)
 {
@@ -30,13 +30,13 @@ void	free_all_stack(t_list **a, t_list **b)
 	free_stack(*b);
 }
 
-void	free_data(char **str)
+void	free_content(char **str)
 {
 	int	i;
 
 	i = -1;
 	while (*str[++i])
 	{
-		free (*str[i]);
+		free (str[i]);
 	}
 }

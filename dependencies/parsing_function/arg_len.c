@@ -6,11 +6,11 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 16:53:51 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/06 16:56:29 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/13 21:33:07 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 int	arg_len(char **str)
 {

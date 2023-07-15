@@ -6,11 +6,11 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 13:37:52 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/08 13:43:07 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/13 20:36:19 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 void	swap_number(t_list **lst)
 {

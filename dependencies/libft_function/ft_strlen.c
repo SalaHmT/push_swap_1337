@@ -6,13 +6,13 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 14:28:37 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/06 14:29:55 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/13 21:11:44 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 

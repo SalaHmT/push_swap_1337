@@ -6,11 +6,11 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 14:39:36 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/06 14:59:09 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/15 20:59:56 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 static	int	cnt_words(const char *str, char c)
 {

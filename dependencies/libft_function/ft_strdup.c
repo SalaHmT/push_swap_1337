@@ -6,11 +6,11 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 14:22:57 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/06 14:56:46 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/13 20:35:51 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 char	*ft_strdup(const char *str)
 {

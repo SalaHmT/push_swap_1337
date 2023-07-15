@@ -6,11 +6,11 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 11:58:29 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/08 12:15:02 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/13 20:36:16 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 void	rotate_number(t_list **lst)
 {

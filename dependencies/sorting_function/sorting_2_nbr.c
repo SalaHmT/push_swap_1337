@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_function_ handling.c                         :+:      :+:    :+:   */
+/*   sorting_2_nbr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shamsate <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/04 18:40:44 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/12 15:45:31 by shamsate         ###   ########.fr       */
+/*   Created: 2023/07/08 13:46:56 by shamsate          #+#    #+#             */
+/*   Updated: 2023/07/15 20:04:54 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
-void	check_nbr_error(void)
+void	sort_2_nbr(t_list **src)
 {
-	ft_putstr("Error\n");
-	exit(EXIT_FAILURE);
+	t_list	*num;
+
+	num = *src;
+	if (num->content > num->next->content)
+		sa(src);
 }

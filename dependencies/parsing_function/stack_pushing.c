@@ -6,11 +6,11 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 14:44:53 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/08 15:00:32 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/13 20:36:53 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 bool	check_number(t_list *stk_a)
 {

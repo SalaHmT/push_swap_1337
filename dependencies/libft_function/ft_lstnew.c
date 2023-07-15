@@ -6,13 +6,13 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 15:41:52 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/06 15:47:27 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/13 20:38:48 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
-t_list	*ft_lstnew(void	*content)
+t_list	*ft_lstnew(int content)
 {
 	t_list	*new;
 

@@ -6,11 +6,11 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 18:49:43 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/06 14:21:18 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/13 20:35:22 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 int	ft_isdigit(int c)
 {

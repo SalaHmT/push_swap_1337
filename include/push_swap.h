@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 18:45:13 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/08 18:00:23 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/15 21:08:45 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ typedef struct s_list
 int		ft_isdigit(int c);
 int		ft_atoi(const char *str);
 int		ft_strcmp(char *s1, char *s2);
-size_t	ft_strlen(char *str);
-size_t	ft_strlcpy(char *dst, char *src, size_t size);
+size_t	ft_strlen(const char *str);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 void	ft_putstr(char *str);
 void	ft_putchar(char c);
 char	*ft_strdup(const char *str);
@@ -42,7 +42,7 @@ char	**ft_split(const char *str, char c);
 char	*ft_substr(char	const *s, unsigned int start, size_t len);
 //*****************Struct libft *********
 int		ft_lstsize(t_list *lst);
-t_list	*ft_lstnew(void	*content);
+t_list	*ft_lstnew(int content);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 //********* Parsing *********************
@@ -55,7 +55,7 @@ char	**split_arg(char **str, int x);
 void	check_if_empty(char **str, int len);
 void	free_stack(t_list *stk);
 void	free_all_stack(t_list **a, t_list **b);
-void	free_data(char **str);
+void	free_content(char **str);
 bool	check_number(t_list *stk_a);
 void	push_stk(t_list **stk_a, char **str);
 //************ Movement **********************
@@ -91,7 +91,5 @@ void	push_2_stk_b(t_list **src, t_list **dst, int mv, int chk);
 void	sort_500_nbr(t_list **src, t_list **dst);
 void	sort_100_nbr(t_list **src, t_list **dst);
 void	mapping_nbr(t_list **stk_a, t_list **stk_b);
-//******** Error Handling Msg **********
-void	check_nbr_error(void);
 
 #endif

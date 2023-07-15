@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 16:12:54 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/08 18:01:22 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/15 20:52:04 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,14 @@ int	main(int argc, char **argv)
 	char	**str;
 
 	if (argc == 1)
-		return (NULL);
+		return (0);
 	stk_a = NULL;
 	stk_b = NULL;
 	check_if_empty(argv, argc);
 	str = split_arg(argv, argc);
 	push_stk(&stk_a, str);
 	get_idx(stk_a);
-	mapping_nbr(&stk_a, stk_b);
-	free_data(str);
+	mapping_nbr(&stk_a, &stk_b);
+	free_content(str);
 	return (EXIT_SUCCESS);
 }

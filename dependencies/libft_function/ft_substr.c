@@ -6,11 +6,11 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 15:01:43 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/06 15:55:46 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/13 20:36:04 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 char	*ft_substr(char	const *s, unsigned int start, size_t len)
 {
