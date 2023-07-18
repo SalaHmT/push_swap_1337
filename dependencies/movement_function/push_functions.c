@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 11:47:02 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/13 20:36:08 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/17 20:08:15 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	pa(t_list **stk_b, t_list **stk_a)
 	ft_putstr("pa\n");
 }
 
-void	pb(t_list **stk_b, t_list **stk_a)
+void	pb(t_list **stk_a, t_list **stk_b)
 {
 	push_number(stk_a, stk_b);
 	ft_putstr("pb\n");

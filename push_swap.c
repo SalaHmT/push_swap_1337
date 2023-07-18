@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 16:12:54 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/15 20:52:04 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/18 22:04:54 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ int	main(int argc, char **argv)
 	t_list	*stk_b;
 	char	**str;
 
-	if (argc == 1)
-		return (0);
 	stk_a = NULL;
 	stk_b = NULL;
+	if (argc == 1)
+		return (0);
 	check_if_empty(argv, argc);
 	str = split_arg(argv, argc);
 	push_stk(&stk_a, str);

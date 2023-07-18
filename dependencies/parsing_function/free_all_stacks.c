@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 17:44:17 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/15 20:52:16 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/17 18:50:35 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	free_content(char **str)
 	int	i;
 
 	i = -1;
-	while (*str[++i])
+	while (str[++i])
 	{
 		free (str[i]);
 	}

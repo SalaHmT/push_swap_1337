@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 15:37:15 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/15 20:05:04 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/17 19:15:19 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	sort_5_nbr(t_list **src, t_list **dst)
 	min_idx = get_idx_min_nbr(*src);
 	while (ft_lstsize(*src) > 4)
 	{
-		if (check_number(*src) && (!dst))
+		if (check_number(*src) && (!*dst))
 			return ;
 		if (min_idx == 0)
 			pb(src, dst);

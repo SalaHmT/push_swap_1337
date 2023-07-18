@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 15:49:25 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/13 20:35:34 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/15 21:14:45 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_lstsize(t_list *lst)
 	while (lst)
 	{
 		lst = lst->next;
-			size++;
+		size++;
 	}
 	return (size);
 }

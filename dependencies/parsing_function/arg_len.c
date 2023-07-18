@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 16:53:51 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/13 21:33:07 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/17 18:44:04 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	arg_len(char **str)
 	int	i;
 
 	i = 0;
-	while (*str[i])
+	while (str[i])
 		i++;
 	return (i);
 }
