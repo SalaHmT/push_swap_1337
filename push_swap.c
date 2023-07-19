@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 16:12:54 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/18 22:04:54 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/19 20:44:51 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	mapping_nbr(t_list **stk_a, t_list **stk_b)
 		else if (size > 200)
 			sort_500_nbr(stk_a, stk_b);
 	}
-	free_all_stack(stk_a, stk_b);
+	free_all_stk(stk_a, stk_b);
 }
 
 int	main(int argc, char **argv)

@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 22:24:40 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/19 02:13:13 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/19 20:45:22 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ int	main(int argc, char **argv)
 	str = split_arg(argv, argc);
 	push_stk(&stk_a, str);
 	checker(&stk_a, &stk_b);
-	free_all_stack(&stk_a, &stk_b);
+	free_all_stk(&stk_a, &stk_b);
 	free_content(str);
 	return (EXIT_SUCCESS);
 }

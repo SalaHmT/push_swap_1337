@@ -6,13 +6,13 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 17:44:17 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/19 02:08:23 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/19 20:42:26 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-void	free_stack(t_list *stk)
+void	free_stk(t_list *stk)
 {
 	t_list	*data;
 
@@ -24,10 +24,10 @@ void	free_stack(t_list *stk)
 	}
 }
 
-void	free_all_stack(t_list **a, t_list **b)
+void	free_all_stk(t_list **a, t_list **b)
 {
-	free_stack(*a);
-	free_stack(*b);
+	free_stk(*a);
+	free_stk(*b);
 }
 
 void	free_content(char **str)

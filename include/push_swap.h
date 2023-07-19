@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 18:45:13 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/19 02:17:45 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/19 20:42:49 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,8 +66,8 @@ int		is_all_digit(char *str);
 char	*join_arg(char **str, int x);
 char	**split_arg(char **str, int x);
 void	check_if_empty(char **str, int len);
-void	free_stack(t_list *stk);
-void	free_all_stack(t_list **a, t_list **b);
+void	free_stk(t_list *stk);
+void	free_all_stk(t_list **a, t_list **b);
 void	free_content(char **str);
 bool	check_number(t_list *stk_a);
 void	push_stk(t_list **stk_a, char **str);
