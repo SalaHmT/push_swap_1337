@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 18:45:13 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/15 21:08:45 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/19 02:17:45 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ typedef struct s_list
 	int				pos;
 	struct s_list	*next;
 }							t_list;
-
 // ******** libft Function *************
 int		ft_isdigit(int c);
 int		ft_atoi(const char *str);
@@ -40,6 +39,20 @@ char	*ft_strdup(const char *str);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	**ft_split(const char *str, char c);
 char	*ft_substr(char	const *s, unsigned int start, size_t len);
+char	*ft_strchr(char *s, int c);
+// *** Get_Next_Line ***
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
+
+size_t	ft_strlen_c(char *s);
+char	*ft_strjoin_l(char *s1, char *s2);
+char	*get_ln(char *backup);
+char	*read_ln(int fd, char *backup);
+char	*get_sv_and_fr(char *backup);
+char	*get_next_line(int fd);
+char	*ft_strchr_r(char *s, int c);
+
 //*****************Struct libft *********
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstnew(int content);
@@ -91,5 +104,23 @@ void	push_2_stk_b(t_list **src, t_list **dst, int mv, int chk);
 void	sort_500_nbr(t_list **src, t_list **dst);
 void	sort_100_nbr(t_list **src, t_list **dst);
 void	mapping_nbr(t_list **stk_a, t_list **stk_b);
+//**************** Bonus Part ******************
+bool	check_in(t_list **src, t_list **dst, char *str);
+void	checker(t_list **src, t_list **dst);
+void	push_number_b(t_list **src, t_list **dst);
+void	reverse_number_b(t_list **lst);
+void	rotate_number_b(t_list **lst);
+void	swap_number_b(t_list **lst);
+void	pa_b(t_list **stk_b, t_list **stk_a);
+void	pb_b(t_list **stk_a, t_list **stk_b);
+void	rrb_b(t_list **dst);
+void	rra_b(t_list **src);
+void	rrr_b(t_list **src, t_list **dst);
+void	rb_b(t_list **dst);
+void	ra_b(t_list **src);
+void	rr_b(t_list **src, t_list **dst);
+void	sb_b(t_list **dst);
+void	sa_b(t_list **src);
+void	ss_b(t_list **src, t_list **dst);
 
 #endif

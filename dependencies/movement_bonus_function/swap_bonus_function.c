@@ -1,43 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_all_stacks.c                                  :+:      :+:    :+:   */
+/*   swap_bonus_function.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/06 17:44:17 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/19 02:08:23 by shamsate         ###   ########.fr       */
+/*   Created: 2023/07/18 23:52:05 by shamsate          #+#    #+#             */
+/*   Updated: 2023/07/19 01:10:33 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-void	free_stack(t_list *stk)
+void	swap_number_b(t_list **lst)
 {
-	t_list	*data;
+	int	swap;
 
-	while (stk)
-	{
-		data = stk;
-		stk = stk->next;
-		free(data);
-	}
+	if (ft_lstsize(*lst) <= 1)
+		return ;
+	swap = (*lst)->content;
+	(*lst)->content = (*lst)->next->content;
+	(*lst)->next->content = swap;
 }
 
-void	free_all_stack(t_list **a, t_list **b)
+void	sb_b(t_list **dst)
 {
-	free_stack(*a);
-	free_stack(*b);
+	swap_number_b(dst);
 }
 
-void	free_content(char **str)
+void	sa_b(t_list **src)
 {
-	int	i;
+	swap_number_b(src);
+}
 
-	i = -1;
-	while (str[++i])
-	{
-		free (str[i]);
-	}
-	free(str);
+void	ss_b(t_list **src, t_list **dst)
+{
+	swap_number_b(src);
+	swap_number_b(dst);
 }

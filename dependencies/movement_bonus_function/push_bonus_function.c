@@ -1,43 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_all_stacks.c                                  :+:      :+:    :+:   */
+/*   push_bonus_function.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/06 17:44:17 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/19 02:08:23 by shamsate         ###   ########.fr       */
+/*   Created: 2023/07/18 23:45:24 by shamsate          #+#    #+#             */
+/*   Updated: 2023/07/18 23:48:08 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-void	free_stack(t_list *stk)
+void	push_number_b(t_list **src, t_list **dst)
 {
-	t_list	*data;
+	t_list	*push;
 
-	while (stk)
-	{
-		data = stk;
-		stk = stk->next;
-		free(data);
-	}
+	if (!ft_lstsize(*src))
+		return ;
+	push = *src;
+	*src = (*src)->next;
+	push->next = NULL;
+	ft_lstadd_front(dst, push);
 }
 
-void	free_all_stack(t_list **a, t_list **b)
+void	pa_b(t_list **stk_b, t_list **stk_a)
 {
-	free_stack(*a);
-	free_stack(*b);
+	push_number_b(stk_b, stk_a);
 }
 
-void	free_content(char **str)
+void	pb_b(t_list **stk_a, t_list **stk_b)
 {
-	int	i;
-
-	i = -1;
-	while (str[++i])
-	{
-		free (str[i]);
-	}
-	free(str);
+	push_number_b(stk_a, stk_b);
 }

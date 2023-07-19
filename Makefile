@@ -6,11 +6,12 @@
 #    By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/13 21:02:38 by shamsate          #+#    #+#              #
-#    Updated: 2023/07/15 20:07:49 by shamsate         ###   ########.fr        #
+#    Updated: 2023/07/19 01:46:40 by shamsate         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
+BN_NAME = checker
 
 CC = CC
 
@@ -39,8 +40,24 @@ MON_FILES = dependencies/libft_function/ft_atoi.c dependencies/libft_function/ft
 			dependencies/sorting_function/sorting_4_nbr.c dependencies/sorting_function/sorting_5_nbr.c \
 			push_swap.c \
 
+BONUS_FILES = dependencies/libft_function/ft_atoi.c dependencies/libft_function/ft_isdigit.c \
+			dependencies/libft_function/ft_lstadd_front.c dependencies/libft_function/ft_lstlast.c \
+			dependencies//libft_function/ft_lstnew.c dependencies/libft_function/ft_lstsize.c \
+			dependencies/libft_function/ft_putchar.c dependencies/libft_function/ft_putstr.c \
+			dependencies/libft_function/ft_split.c dependencies/libft_function/ft_strcmp.c \
+			dependencies/libft_function/ft_strdup.c dependencies/libft_function/ft_strjoin.c \
+			dependencies/libft_function/ft_strlcpy.c dependencies/libft_function/ft_strlen.c \
+			dependencies/libft_function/ft_substr.c dependencies/parsing_function/arg_len.c \
+			dependencies/parsing_function/check_if_dupl.c dependencies/parsing_function/check_if_empty.c \
+			dependencies/parsing_function/check_if_is_nbr.c \
+			dependencies/parsing_function/free_all_stacks.c dependencies/parsing_function/join_and_split_arg.c \
+			dependencies/parsing_function/stack_pushing.c  dependencies/get_next_line/get_next_line_utils.c dependencies/get_next_line/get_next_line.c \
+			dependencies/movement_bonus_function/push_bonus_function.c dependencies/movement_bonus_function/reverse_bonus_function.c \
+			dependencies/movement_bonus_function/rotate_bonus_function.c dependencies/movement_bonus_function/swap_bonus_function.c \
+			push_swap_bonus.c \
 
 MON_OBJS  = $(MON_FILES:.c=.o)
+BONUS_OBJS = $(BONUS_FILES:.c=.o)
 
 all : $(NAME)
 
@@ -53,14 +70,22 @@ $(NAME): $(MON_OBJS) $(HEADER)
 		@echo "- Making Object file $(notdir $@) from source file $(notdir $<)...\n"
 		@ $(CC) $(CFLAGS) -c $< -o $@
 
+bonus: $(BN_NAME)
+
+$(BN_NAME): $(BONUS_OBJS) $(HEADER)
+	@$(CC) $(CFLAGS) $(BONUS_OBJS) -o $(BN_NAME)
+	@echo "BONUS - Execution ready..\n"
+
 clean:
-		@$(RM) $(MON_OBJS)
+		@$(RM) $(MON_OBJS) $(BONUS_OBJS)
 		@echo "\nObject Files Removed.. \n"
 
 fclean: clean
-		@$(RM) $(NAME)
+		@$(RM) $(NAME) $(BN_NAME)
 		@echo "\nRemoved Done .. \n"
 
 re : fclean all
 
-.PHONY: all clean fclean re
+re_bn : fclean bonus
+
+.PHONY: all clean fclean re bonus re_bn

@@ -1,43 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_all_stacks.c                                  :+:      :+:    :+:   */
+/*   reverse_bonus_function.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/06 17:44:17 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/19 02:08:23 by shamsate         ###   ########.fr       */
+/*   Created: 2023/07/18 23:48:38 by shamsate          #+#    #+#             */
+/*   Updated: 2023/07/19 01:16:23 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-void	free_stack(t_list *stk)
+void	reverse_number_b(t_list **lst)
 {
-	t_list	*data;
+	t_list	*rev;
+	t_list	*tmp;
 
-	while (stk)
-	{
-		data = stk;
-		stk = stk->next;
-		free(data);
-	}
+	if (ft_lstsize(*lst) <= 1)
+		return ;
+	tmp = *lst;
+	rev = ft_lstlast(tmp);
+	while (tmp->next->next)
+		tmp = tmp->next;
+	tmp->next = NULL;
+	ft_lstadd_front(lst, rev);
 }
 
-void	free_all_stack(t_list **a, t_list **b)
+void	rrb_b(t_list **dst)
 {
-	free_stack(*a);
-	free_stack(*b);
+	reverse_number_b(dst);
 }
 
-void	free_content(char **str)
+void	rra_b(t_list **src)
 {
-	int	i;
+	reverse_number_b(src);
+}
 
-	i = -1;
-	while (str[++i])
-	{
-		free (str[i]);
-	}
-	free(str);
+void	rrr_b(t_list **src, t_list **dst)
+{
+	reverse_number_b(src);
+	reverse_number_b(dst);
 }

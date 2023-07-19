@@ -1,43 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_all_stacks.c                                  :+:      :+:    :+:   */
+/*   rotate_bonus_function.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/06 17:44:17 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/19 02:08:23 by shamsate         ###   ########.fr       */
+/*   Created: 2023/07/18 23:50:00 by shamsate          #+#    #+#             */
+/*   Updated: 2023/07/18 23:51:26 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-void	free_stack(t_list *stk)
+void	rotate_number_b(t_list **lst)
 {
-	t_list	*data;
+	t_list	*rot;
+	t_list	*tmp;
 
-	while (stk)
-	{
-		data = stk;
-		stk = stk->next;
-		free(data);
-	}
+	if (ft_lstsize(*lst) <= 1)
+		return ;
+	tmp = (*lst);
+	(*lst) = (*lst)->next;
+	rot = ft_lstlast(*lst);
+	rot->next = tmp;
+	tmp->next = NULL;
 }
 
-void	free_all_stack(t_list **a, t_list **b)
+void	rb_b(t_list **dst)
 {
-	free_stack(*a);
-	free_stack(*b);
+	rotate_number_b(dst);
 }
 
-void	free_content(char **str)
+void	ra_b(t_list **src)
 {
-	int	i;
+	rotate_number_b(src);
+}
 
-	i = -1;
-	while (str[++i])
-	{
-		free (str[i]);
-	}
-	free(str);
+void	rr_b(t_list **src, t_list **dst)
+{
+	ra_b(src);
+	rb_b(dst);
 }
