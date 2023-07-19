@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 16:09:23 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/15 20:05:24 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/19 03:50:46 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,10 @@ int	get_idx_nbr(t_list *dst, int size)
 {
 	int	idx;
 
-	idx = 0;
+	idx = -1;
 	while (dst)
 	{
+		++idx;
 		if (dst->pos == size)
 			break ;
 		dst = dst->next;
@@ -80,7 +81,7 @@ void	push_2_a(t_list **dst, t_list **src)
 	int	size;
 
 	size = ft_lstsize(*dst) - 1;
-	while (dst)
+	while (*dst)
 	{
 		if (get_num(*dst, size) <= get_num(*dst, size - 1))
 		{
@@ -96,5 +97,6 @@ void	push_2_a(t_list **dst, t_list **src)
 			sa(src);
 			size--;
 		}
+		size--;
 	}
 }
