@@ -3,20 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shamsate <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 18:56:58 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/13 19:33:23 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/19 06:14:33 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
+void	error_msg(void)
+{
+	ft_putstr("Error\n");
+	exit(EXIT_FAILURE);
+}
+
 int	ft_atoi(const char *str)
 {
-	int		i;
-	int		nbr;
-	int		sign;
+	int			i;
+	long long	nbr;
+	int			sign;
 
 	i = 0;
 	nbr = 0;
@@ -33,6 +39,10 @@ int	ft_atoi(const char *str)
 	{
 		nbr = nbr * 10 + str[i] - '0';
 		i++;
+		if (nbr > 2147483647 && sign == 1)
+			error_msg();
+		else if (nbr > 2147483648 && sign == -1)
+			error_msg();
 	}
 	return ((int )nbr * sign);
 }
