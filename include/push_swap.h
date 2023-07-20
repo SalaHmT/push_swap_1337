@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 18:45:13 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/19 20:42:49 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/21 00:22:25 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,5 +122,6 @@ void	rr_b(t_list **src, t_list **dst);
 void	sb_b(t_list **dst);
 void	sa_b(t_list **src);
 void	ss_b(t_list **src, t_list **dst);
-
+void	display_the_name(void);
+void	display_the_name_b(void);
 #endif

@@ -6,7 +6,7 @@
 #    By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/13 21:02:38 by shamsate          #+#    #+#              #
-#    Updated: 2023/07/19 20:35:48 by shamsate         ###   ########.fr        #
+#    Updated: 2023/07/21 00:21:38 by shamsate         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ MON_FILES = dependencies/libft_function/ft_atoi.c dependencies/libft_function/ft
 			dependencies/sorting_function/get_min_max_index_100.c dependencies/sorting_function/pushing_2_stk.c \
 			dependencies/sorting_function/sorting_2_nbr.c dependencies/sorting_function/sorting_3_nbr.c \
 			dependencies/sorting_function/sorting_4_nbr.c dependencies/sorting_function/sorting_5_nbr.c \
-			push_swap.c \
+			push_swap.c creator.c\
 
 BONUS_FILES = dependencies/libft_function/ft_atoi.c dependencies/libft_function/ft_isdigit.c \
 			dependencies/libft_function/ft_lstadd_front.c dependencies/libft_function/ft_lstlast.c \
@@ -54,7 +54,7 @@ BONUS_FILES = dependencies/libft_function/ft_atoi.c dependencies/libft_function/
 			dependencies/parsing_function/stack_pushing.c  dependencies/get_next_line/get_next_line_utils.c dependencies/get_next_line/get_next_line.c \
 			dependencies/movement_bonus_function/push_bonus_function.c dependencies/movement_bonus_function/reverse_bonus_function.c \
 			dependencies/movement_bonus_function/rotate_bonus_function.c dependencies/movement_bonus_function/swap_bonus_function.c \
-			push_swap_bonus.c \
+			push_swap_bonus.c creator_bonus.c\
 
 MON_OBJS  = $(MON_FILES:.c=.o)
 BONUS_OBJS = $(BONUS_FILES:.c=.o)
@@ -64,7 +64,7 @@ all : $(NAME)
 $(NAME): $(MON_OBJS) $(HEADER)
 		@echo "  - Compilation Starting $(NAME)..\n"
 		@ $(CC) $(CFLAGS) $(MON_OBJS) -o $(NAME)
-		@echo " - Execution ready..\n"
+		@echo " - Execution <./push_swap> ready..\n"
 
 %.o: %.c $(HEADER)
 		@echo "- Making Object file $(notdir $@) from source file $(notdir $<)...\n"
@@ -74,15 +74,15 @@ bonus: $(BN_NAME)
 
 $(BN_NAME): $(BONUS_OBJS) $(HEADER)
 	@$(CC) $(CFLAGS) $(BONUS_OBJS) -o $(BN_NAME)
-	@echo "BONUS - Execution ready..\n"
+	@echo "BONUS - Execution <./checker> ready..\n"
 
 clean:
 		@$(RM) $(MON_OBJS) $(BONUS_OBJS)
-		@echo "\nObject Files Removed.. \n"
+		@echo "\n Object Files Removed.. \n"
 
 fclean: clean
 		@$(RM) $(NAME) $(BN_NAME)
-		@echo "\nRemoved Done .. \n"
+		@echo "\n Removed Done .. \n"
 
 re : fclean all
 

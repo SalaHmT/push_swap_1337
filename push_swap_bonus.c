@@ -6,7 +6,7 @@
 /*   By: shamsate <shamsate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 22:24:40 by shamsate          #+#    #+#             */
-/*   Updated: 2023/07/19 20:45:22 by shamsate         ###   ########.fr       */
+/*   Updated: 2023/07/21 00:24:26 by shamsate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,22 +20,22 @@ bool	check_in(t_list **src, t_list **dst, char *str)
 		return (sb_b(dst), true);
 	else if (!ft_strcmp(str, "ss\n"))
 		return (ss_b(src, dst), true);
-	else if (!ft_strcmp(str, "pa\n"))
-		return (pa_b(dst, src), true);
-	else if (!ft_strcmp(str, "pb\n"))
-		return (pb_b(src, dst), true);
-	else if (!ft_strcmp(str, "ra\n"))
-		return (ra_b(src), true);
-	else if (!ft_strcmp(str, "rb\n"))
-		return (rb_b(dst), true);
-	else if (!ft_strcmp(str, "rr\n"))
-		return (rr_b(src, dst), true);
 	else if (!ft_strcmp(str, "rra\n"))
 		return (rra_b(src), true);
 	else if (!ft_strcmp(str, "rrb\n"))
 		return (rrb_b(dst), true);
 	else if (!ft_strcmp(str, "rrr\n"))
 		return (rrr_b(src, dst), true);
+	else if (!ft_strcmp(str, "ra\n"))
+		return (ra_b(src), true);
+	else if (!ft_strcmp(str, "rb\n"))
+		return (rb_b(dst), true);
+	else if (!ft_strcmp(str, "rr\n"))
+		return (rr_b(src, dst), true);
+	else if (!ft_strcmp(str, "pa\n"))
+		return (pa_b(dst, src), true);
+	else if (!ft_strcmp(str, "pb\n"))
+		return (pb_b(src, dst), true);
 	else
 		return (false);
 	return (false);
@@ -73,6 +73,7 @@ int	main(int argc, char **argv)
 	stk_b = NULL;
 	if (argc == 1)
 		return (0);
+	display_the_name_b();
 	check_if_empty(argv, argc);
 	str = split_arg(argv, argc);
 	push_stk(&stk_a, str);
